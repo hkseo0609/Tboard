@@ -1,0 +1,16 @@
+package com.tigrison.web.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.tigrison.web.domain.BoardDTO;
+
+@Component
+public interface BoardService {
+	public Object getService (BoardDTO bean);
+	public List<?>listService (Object o);
+	public void postService (Object o);
+	public void putService (Object o);
+	public void deleteService (Object o);
+}

@@ -1,0 +1,17 @@
+package com.tigrison.web.mapper;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.tigrison.web.domain.BoardDTO;
+
+@Repository
+public interface MainMapper {
+	public Object selectOne (BoardDTO bean);
+	public void insert(Object o);
+	public List<?> selectList(BoardDTO bean);
+	public String count(BoardDTO bean);
+	public void update (Object o);
+	public void delete(BoardDTO bean);
+}

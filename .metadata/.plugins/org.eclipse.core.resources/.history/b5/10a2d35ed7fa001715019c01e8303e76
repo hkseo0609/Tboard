@@ -1,0 +1,17 @@
+var meta = meta || {};
+
+meta.common=(function(){
+	var init = function(){
+		alert('success');
+	};
+	
+	var onCreate = function(){
+		
+	};
+	
+	var setContextView = function(){
+		
+	};
+	
+	return {init:init}
+})();

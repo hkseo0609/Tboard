@@ -1,0 +1,53 @@
+var meta = meta || {};
+
+meta.common=(function(){
+	var init = function(){
+		alert('success');
+		meta.session.init();
+		meta.main.init();
+	};
+	
+	var onCreate = function(){
+		
+	};
+	
+	var setContextView = function(){
+		
+	};
+	
+	return {init:init}
+})();
+
+meta.session = {
+		init : function(ctx){
+			sessionStorage.setItem('j','./resources/js');
+			sessionStorage.setItem('c','./resources/css');
+		},
+		getPath : function(x){
+			return sessionStorage.getItem(x);
+		}
+};
+
+var $$ = function(x){return meta.session.getPath(x);};
+
+meta.main = (function(){
+	var $container, ctx, js, img;
+	var init=function(){
+		js=$$('j');
+		onCreate();
+	};
+	var onCreate=function(){
+		
+		$.getJSON('./get', d=>{
+			$('#d1').text(d.get.seq);
+			$('#d2').text(d.get.title);
+			$('#d3').text(d.get.content);
+			$('#d4').text(d.get.createDt);
+		});
+		
+	};
+	var setContextView=function(){
+		
+	};
+	return{init:init}
+})();

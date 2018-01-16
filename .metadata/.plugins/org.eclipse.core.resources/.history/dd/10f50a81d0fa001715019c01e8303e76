@@ -1,0 +1,5 @@
+package com.tigrison.web.domain;
+
+public class BoardDTO {
+
+}

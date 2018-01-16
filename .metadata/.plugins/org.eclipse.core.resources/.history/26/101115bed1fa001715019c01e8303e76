@@ -1,0 +1,5 @@
+package com.tigrison.web.service;
+
+public class BoardServiceImpl {
+
+}
